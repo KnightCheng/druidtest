@@ -8,7 +8,7 @@
 			<property name="suppressAllComments" value="true" />
 		</commentGenerator>
 		<!-- 数据库链接URL、用户名、密码 -->
-		<jdbcConnection driverClass="com.mysql.cj.jdbc.Driver" connectionURL="jdbc:mysql://127.0.0.1:3306/test3?Timezone=GMT" userId="root" password="Paradise123">  <!-- 2 -->
+		<jdbcConnection driverClass="com.mysql.cj.jdbc.Driver" connectionURL="jdbc:mysql://127.0.0.1:3306/test3?useSSL=false&amp;serverTimezone=GMT" userId="root" password="Paradise123">  <!-- 2 -->
 		</jdbcConnection>
 		<javaTypeResolver>
 			<property name="forceBigDecimals" value="false" />
