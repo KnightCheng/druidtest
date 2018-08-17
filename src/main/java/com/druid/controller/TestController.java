@@ -12,6 +12,7 @@ public class TestController {
     @RequestMapping("/hello")
     @ResponseBody
     public String hello(){
+
         return "hello permission";
     }
 }
