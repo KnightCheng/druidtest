@@ -13,11 +13,14 @@
     <!--启动注解驱动-->
     <mvc:annotation-driven/>
 
+
+
     <!--启动包扫描-->
     <context:component-scan base-package="com.druid.controller"/>
     <context:component-scan base-package="com.druid.service"/>
 
     <!--页面处理-->
+    <bean class="com.druid.common.SpringExceptionResolver"/>
     <bean class="org.springframework.web.servlet.view.BeanNameViewResolver"/>
     <bean id="jsonView" class="org.springframework.web.servlet.view.json.MappingJackson2JsonView"/>
 
