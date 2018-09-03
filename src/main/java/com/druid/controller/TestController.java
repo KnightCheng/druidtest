@@ -4,6 +4,7 @@ import com.druid.common.JsonData;
 import com.druid.common.SpringExceptionResolver;
 import com.druid.dao.SysAclMapper;
 import com.druid.dto.DeptLevelDto;
+import com.druid.exception.ParamException;
 import com.druid.exception.PermissionException;
 import com.druid.model.SysAcl;
 import com.druid.param.TestVo;
@@ -15,6 +16,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -55,6 +57,12 @@ public class TestController {
     public JsonData getDeptLevelDtoList(){
         List<DeptLevelDto> list=sysTreeService.deptTree();
         return JsonData.success(list);
+    }
+
+    @RequestMapping("/test.json")
+    @ResponseBody
+    public ModelAndView map(){
+        throw new ParamException("参数测试");
     }
 }
 
